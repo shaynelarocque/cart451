@@ -1,0 +1,78 @@
+/* Body Styles */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Save Button Styles */
+button#saveButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button#saveButton:hover {
+    background-color: #45a049;
+}
+
+/* Main Styles */
+main {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Art Details Styles */
+#art-details {
+    background: #ffffff;
+    margin-top: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+#art-details p {
+    margin-bottom: 10px;
+}
+
+#art-details strong {
+    font-weight: bold;
+}
+
+#art-details ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#art-details li {
+    margin-bottom: 5px;
+}

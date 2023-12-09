@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Reflections</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="camera">
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div class="eye-container">
+      <div class="ball-container">
+        <video id="video" style="display: none;"></video>
+        <svg>
+          <filter id="pixelate" x="0" y="0" width="700" height="900" filterUnits="userSpaceOnUse"></filter>
+        </svg>
+        <div id="stage" class="stage">
+          <figure class="ball">
+            <span class="shadow"></span>
+            <span id="eye" class="iris"></span>
+            <div id="orbitingMouth" class="mouth"></div>
+          </figure>
+          <span class="ground-shadow"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="menu">
+    <h1>Digital Reflections</h1>
+    <input type="text" id="hfApiKey" placeholder="Hugging Face API Key" value="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">
+    <input type="text" id="model1" placeholder="Hugging Face Model Endpoint 1" value="microsoft/git-base">
+    <input type="text" id="model2" placeholder="Hugging Face Model Endpoint 2"
+      value="nlpconnect/vit-gpt2-image-captioning">
+    <input type="text" id="model3" placeholder="Hugging Face Model Endpoint 3"
+      value="Salesforce/blip-image-captioning-large">
+    <input type="text" id="model4" placeholder="Hugging Face Model Endpoint 4"
+      value="Salesforce/blip-image-captioning-base">
+    <input type="text" id="model5" placeholder="Hugging Face Model Endpoint 5" value="nateraw/vit-age-classifier">
+    <input type="text" id="model6" placeholder="Hugging Face Model Endpoint 6" value="trpakov/vit-face-expression">
+    <input type="text" id="model7" placeholder="Hugging Face Model Endpoint 7"
+      value="rizvandwiki/gender-classification-2">
+    <button id="fetchDescriptions">Fetch Descriptions</button>
+    <input type="text" id="userDesc1" placeholder="User Description 1" readonly>
+    <input type="text" id="userDesc2" placeholder="User Description 2" readonly>
+    <input type="text" id="userDesc3" placeholder="User Description 3" readonly>
+    <input type="text" id="userDesc4" placeholder="User Description 4" readonly>
+    <input type="text" id="userDesc5" placeholder="User Description 5" readonly>
+    <input type="text" id="userDesc6" placeholder="User Description 6" readonly>
+    <input type="text" id="userDesc7" placeholder="User Description 7" readonly>
+    <input type="text" id="userDesc8" placeholder="User Description 8" readonly>
+    <button id="generateArt">Generate Digital Reflection!</button>
+    <audio id="dingSound" src="./stage1/assets/ding.mp3" type="audio/mpeg" style="display: none;"></audio>
+    <pre id="jsonOutput"></pre>
+  </div>
+  <script src="./stage1/scripts/pixelate.js"></script>
+  <script src="./stage1/scripts/eye.js"></script>
+  <script src="./stage1/scripts/huggingface.js" type="module"></script>
+  <script src="./stage1/scripts/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
+</body>
+
+</html>
